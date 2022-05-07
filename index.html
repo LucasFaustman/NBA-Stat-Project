@@ -4,8 +4,8 @@
     	<meta charset="utf-8">
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
-
-		<title>Title in the tab</title>
+		<link rel="icon" href="./images/default.png">
+		<title>myPlayer.io</title>
 
 		<!-- external CSS link -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
 	<section class="playerCard">
 		<img src="./images/default.png" id="logo" alt="">
 		<section class="buttonAndInput">
-			<input type="text" name="" value="" placeholder="Search for a Player... E.G Lebron James">
+			<input type="text" name="" value="" placeholder="Search for a Current Player... E.G Lebron James">
 			<button type="button" name="button">Get Player!</button>
 		</section>
 			<h3 id="fullName"></h3>
@@ -32,11 +32,12 @@
 			
 			<h3 id="description"></h3>
 			<button id="closeButton">&times;</button>
-			<button type="button" name="button" id="showStatsButton">Show Stats</button>
+			<button type="button" name="button" id="showStatsButton">Show 2021 Averages</button>
 			<button type="button" name="button" id="stopShowingStats">&uarr;</button>
 			<section class="stats-box">
+				<h3 id="noResults"></h3>
 				<div class="stat">
-					<h5>Games Played</h5>
+					<h5>GP</h5>
 					<h6 id="gm"></h6>
 				</div>
 				<div class="stat">
