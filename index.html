@@ -8,19 +8,26 @@
 		<title>Title in the tab</title>
 
 		<!-- external CSS link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 
 	<section class="playerCard">
-		
-			<input type="text" name="" value="" placeholder="Type In a Player...">
+		<section class="buttonAndInput">
+			<input type="text" name="" value="" placeholder="Search for a Player... E.G Lebron James">
 			<button type="button" name="button">Get Player!</button>
+		</section>
 			<h3 id="fullName"></h3>
 			<img src="" alt="">
+			<button type="button" name="button" id="showDescriptionButton">Show Description</button>
+			
 			<h3 id="description"></h3>
-
+			<button id="closeButton">&times;</button>
+			<button type="button" name="button" id="showStatsButton">Show Stats</button>
 			<section class="stats-box">
 				<div class="stat">
 					<h5>Games Played</h5>

@@ -17,6 +17,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+
+  font-family:'Poppins', sans-serif;;
  
 }
 
@@ -34,9 +37,11 @@ img{
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: #eff;
-  padding: 1em;
+  background-color: 		#9370DB;
+  padding: 1em 0;
   border-radius: 30px;
+  width: 40%;
+  height: 50em;
 
   
 }
@@ -44,16 +49,75 @@ img{
 
 .stats-box {
   display: flex;
-  justify-content: space-evenly;
-  width: 100vh;
+  justify-content: space-around;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 5%;
 }
 
-input  {
+#showDescriptionButton , #showStatsButton {
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+
+#description ,#closeButton{
+  position: absolute;
+  
+  top: 10%;
+  width: 75%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #9370DB;
+}
+
+#description {
+  margin-top: 50px;
+}
+
+#closeButton {
+  float: right;
+  box-shadow: 1px #ccc;
+}
+
+
+
+.stats-box h5, .stats-box h6 {
+  margin: 2px;
+  padding: 3px;
+  text-align: center;
+}
+
+.stat h5 {
+  display: none;
+}
+
+
+input {
   border: none;
   outline: none;
   width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  height:55px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+
+button {
+  background-color: #c8b7ed;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 8px;
   height:55px;
 }
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/

@@ -1,6 +1,13 @@
 //Example fetch getting nba player info
 
-document.querySelector('button').addEventListener('click',getPlayer)
+document.querySelector('button').addEventListener('click',getPlayer);
+document.querySelector('#showDescriptionButton').style.display = 'none';
+document.querySelector('#description').style.display = 'none'
+document.querySelector('#closeButton').style.display = 'none'
+document.querySelector('#showStatsButton').style.display = 'none'
+
+
+
 
 function getPlayer() {
 
@@ -18,7 +25,20 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
         if (data.player[i].strSport === 'Basketball') {
           document.querySelector('#fullName').innerHTML = data.player[i].strPlayer
           document.querySelector('img').src = data.player[i].strThumb
+                  // show player description
+          document.querySelector('#showDescriptionButton').style.display = 'flex';
+          document.querySelector('#showStatsButton').style.display = 'flex'
+          document.querySelector('#showDescriptionButton').addEventListener('click',getDescription);
+          function getDescription() {
+          document.querySelector('#description').style.display = 'flex'
+          document.querySelector('#closeButton').style.display = 'flex'
           document.querySelector('#description').innerHTML = data.player[i].strDescriptionEN
+          document.querySelector('#closeButton').addEventListener('click',closeDescription);
+          function closeDescription () {
+            document.querySelector('#description').style.display = 'none'
+          document.querySelector('#closeButton').style.display = 'none'
+          }
+          }
       }
     }
       
@@ -39,6 +59,16 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
+        // display stats only when clicked
+        document.querySelector('#showStatsButton').addEventListener('click',getStats)
+
+        function getStats () {
+          document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'flex')
+          document.querySelector('#showStatsButton').addEventListener('click',stopStats)
+            function stopStats () {
+              document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'none')
+            }
+          // document.querySelectorAll('.stats-box').style.display = 'flex'
 // get baskteball stats
         document.querySelector('#gm').innerHTML = data.data[0].games_played
         document.querySelector('#min').innerHTML = data.data[0].min
@@ -58,7 +88,8 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
         document.querySelector('#assists').innerHTML = data.data[0].ast
         document.querySelector('#steals').innerHTML = data.data[0].stl
         document.querySelector('#block').innerHTML = data.data[0].blk
-        
+        }
+
       })
       .catch(err => {
           console.log(`error ${err}`)
