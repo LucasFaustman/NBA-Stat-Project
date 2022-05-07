@@ -5,6 +5,8 @@ document.querySelector('#showDescriptionButton').style.display = 'none';
 document.querySelector('#description').style.display = 'none'
 document.querySelector('#closeButton').style.display = 'none'
 document.querySelector('#showStatsButton').style.display = 'none'
+document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'none')
+document.querySelector('#stopShowingStats').style.display = 'none'
 
 
 
@@ -32,7 +34,7 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
           function getDescription() {
           document.querySelector('#description').style.display = 'flex'
           document.querySelector('#closeButton').style.display = 'flex'
-          document.querySelector('#description').innerHTML = data.player[i].strDescriptionEN
+          document.querySelector('#description').innerHTML = data.player[i].strDescriptionEN.split('.').join('    ')
           document.querySelector('#closeButton').addEventListener('click',closeDescription);
           function closeDescription () {
             document.querySelector('#description').style.display = 'none'
@@ -64,10 +66,9 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
 
         function getStats () {
           document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'flex')
-          document.querySelector('#showStatsButton').addEventListener('click',stopStats)
-            function stopStats () {
-              document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'none')
-            }
+          document.querySelector('#stopShowingStats').style.display = 'flex'
+          document.querySelector('#showStatsButton').style.display = 'none'
+          
           // document.querySelectorAll('.stats-box').style.display = 'flex'
 // get baskteball stats
         document.querySelector('#gm').innerHTML = data.data[0].games_played
@@ -88,7 +89,20 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
         document.querySelector('#assists').innerHTML = data.data[0].ast
         document.querySelector('#steals').innerHTML = data.data[0].stl
         document.querySelector('#block').innerHTML = data.data[0].blk
-        }
+        
+// stop stats from showing
+
+          document.querySelector('#stopShowingStats').addEventListener('click',stopStats) 
+          function stopStats () {
+            document.querySelectorAll('.stats-box, h5').forEach( element => element.style.display = 'none')
+            document.querySelector('#stopShowingStats').style.display = 'none'
+            document.querySelector('#showStatsButton').style.display = 'flex'
+    
+            }
+            
+        
+      
+      }
 
       })
       .catch(err => {

@@ -90,10 +90,17 @@ img{
   margin: 2px;
   padding: 3px;
   text-align: center;
+  font-size: 15px;
+
 }
 
-.stat h5 {
-  display: none;
+
+
+#stopShowingStats {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
 }
 
 
