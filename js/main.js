@@ -26,7 +26,10 @@ fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${firstName
       for (let i = 0; i <= data.player.length; i++) {
         if (data.player[i].strSport === 'Basketball') {
           document.querySelector('#fullName').innerHTML = data.player[i].strPlayer
-          document.querySelector('img').src = data.player[i].strThumb
+          document.querySelector('#showPosition').innerText = data.player[0].strPosition
+          document.querySelector('#showPosition').innerText = data.player[0].strPosition
+          document.querySelector('#team').innerText = data.player[0].strTeam
+          document.querySelector('#playerPicture').src = data.player[i].strThumb
                   // show player description
           document.querySelector('#showDescriptionButton').style.display = 'flex';
           document.querySelector('#showStatsButton').style.display = 'flex'
