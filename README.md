@@ -6,6 +6,8 @@ Link to project: https://myplayerio.netlify.app/
 
 ![myPlayer ioSS](https://user-images.githubusercontent.com/99927513/167507393-66039d6a-a166-41cc-94a2-79150ba5b6ad.png)
 
+## How It's Made:
+
 **Tech used:**
 Tech used: HTML, CSS, JavaScript.
 
