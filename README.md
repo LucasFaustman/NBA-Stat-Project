@@ -4,7 +4,7 @@ Get any of your favourite NBA players 2021-2022 averages along with a short desc
 
 Link to project: https://myplayerio.netlify.app/
 
-![myPlayer ioSS](https://user-images.githubusercontent.com/99927513/167507393-66039d6a-a166-41cc-94a2-79150ba5b6ad.png)
+<img src="https://media.giphy.com/media/e4u8OG0PzND3cvaDoL/giphy.gif" alt="myplayerio page overview" height="100%" />
 
 ## How It's Made:
 
