@@ -20,3 +20,11 @@ I spent a large amount of time optimizing the app for mobile so that users can s
 ## Lessons Learned:
 
 Don't forget about styling! Getting the data from the APIs was relatively easy, but presenting the data in a way to delight users was a challenge.
+
+## Examples
+
+Take a look at these other examples that I have in my portfolio:
+
+Lucas Faustman Portfolio website: https://github.com/LucasFaustman/lucas-faustman-portfolio
+
+Local Freelance Makeup Artist: https://github.com/LucasFaustman/local-makeup-artist-website
