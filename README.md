@@ -30,3 +30,5 @@ Lucas Faustman Portfolio website: https://github.com/LucasFaustman/lucas-faustma
 Local Freelance Makeup Artist: https://github.com/LucasFaustman/local-makeup-artist-website
 
 Vancouver StarGazers Society APOD Web App with NASA API integration: https://github.com/LucasFaustman/vancouver-stargazers
+
+My Small CRM : https://github.com/LucasFaustman/my-small-crm/tree/main
