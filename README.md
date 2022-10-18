@@ -32,3 +32,8 @@ Local Freelance Makeup Artist: https://github.com/LucasFaustman/local-makeup-art
 Vancouver StarGazers Society APOD Web App with NASA API integration: https://github.com/LucasFaustman/vancouver-stargazers
 
 My Small CRM : https://github.com/LucasFaustman/my-small-crm/tree/main
+
+Machine Learning Brand Guesser: https://machine-brand-guesser.herokuapp.com/
+
+BillTrackr : https://github.com/Ash1eyC0des/bill-trackr
+
